@@ -76,11 +76,11 @@ export default function HeroSection() {
   return (
     <div
       ref={heroRef}
-      className="relative overflow-hidden bg-background py-20 lg:py-24"
+      className="relative overflow-hidden bg-background p-2"
     >
       <DecorationElements />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4  p-6 lg:p-8 border-4 border-y-red-700 border-x-cyan-700 rounded-2xl">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div ref={textContainerRef} className="space-y-8 text-center lg:text-left">
             <div className="animate-text inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">

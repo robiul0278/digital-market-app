@@ -1,17 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import Image from 'next/image';
-import { addToCart } from '@/store/features/cart/cartSlice';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Plus, Minus } from 'lucide-react';
-import { toast } from 'sonner';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/hero/HeroSection';
+import Features from './components/Features';
+import ProductCard from './components/ProductCard';
+import FAQ from './components/FAQ';
 
 const products = [
   {
@@ -59,102 +53,30 @@ const products = [
 ];
 
 export default function Home() {
-  const dispatch = useDispatch();
-  const [selectedQuantities, setSelectedQuantities] = useState<Record<string, number>>({});
-
-  const handleQuantityChange = (productId: string, value: string) => {
-    const quantity = Math.max(1, Math.min(99, parseInt(value) || 1));
-    setSelectedQuantities(prev => ({ ...prev, [productId]: quantity }));
-  };
-
-  const handleIncrement = (productId: string) => {
-    const currentQuantity = selectedQuantities[productId] || 1;
-    if (currentQuantity < 99) {
-      setSelectedQuantities(prev => ({ 
-        ...prev, 
-        [productId]: currentQuantity + 1 
-      }));
-    }
-  };
-
-  const handleDecrement = (productId: string) => {
-    const currentQuantity = selectedQuantities[productId] || 1;
-    if (currentQuantity > 1) {
-      setSelectedQuantities(prev => ({ 
-        ...prev, 
-        [productId]: currentQuantity - 1 
-      }));
-    }
-  };
-
-  const handleAddToCart = (product: typeof products[0]) => {
-    const quantity = selectedQuantities[product.id] || 1;
-    dispatch(addToCart({ ...product, quantity }));
-    toast.success(`Added ${quantity} ${product.name} to cart`);
-    setSelectedQuantities(prev => ({ ...prev, [product.id]: 1 }));
-  };
-
   return (
     <div className="flex flex-col">
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <div className="max-w-7xl mx-auto py-12">
+        <Features />
+        <div className="max-w-7xl mx-auto py-12 px-4 md:p-0 lg:p-0">
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <hr className="flex-grow border border-t border-cyan-700" />
+            <h2 className="text-2xl md:text-3xl font-bold text-center whitespace-nowrap">
+              Our Featured Products
+            </h2>
+            <hr className="flex-grow border border-t border-red-700" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
-              <Card key={product.id} className="flex flex-col">
-                <CardHeader className="p-0">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover rounded-t-lg"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <CardTitle className="p-4">{product.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{product.description}</p>
-                  <p className="text-xl font-bold mt-2">${product.price.toFixed(2)}</p>
-                </CardContent>
-                <CardFooter className="flex items-center gap-2">
-                  <div className="flex items-center rounded-md border">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 rounded-none"
-                      onClick={() => handleDecrement(product.id)}
-                    >
-                      <Minus className="h-3 w-3" />
-                    </Button>
-                    <Input
-                      type="number"
-                      min="1"
-                      max="99"
-                      value={selectedQuantities[product.id] || 1}
-                      onChange={(e) => handleQuantityChange(product.id, e.target.value)}
-                      className="h-8 w-14 rounded-none border-0 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                    />
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 rounded-none"
-                      onClick={() => handleIncrement(product.id)}
-                    >
-                      <Plus className="h-3 w-3" />
-                    </Button>
-                  </div>
-                  <Button className="flex-1 gap-2" onClick={() => handleAddToCart(product)}>
-                    <Plus className="h-4 w-4" /> Add to Cart
-                  </Button>
-                </CardFooter>
-              </Card>
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
+
       </main>
+      <FAQ />
       <Footer />
     </div>
   );

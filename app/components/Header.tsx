@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="max-w-7xl mx-auto flex h-16 items-center justify-between">
+      <div className="max-w-7xl mx-auto flex h-16 items-center justify-between p-4 md:p-0 lg:p-0">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold">DigitalMarket</span>
         </Link>
@@ -29,7 +29,7 @@ export default function Header() {
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </Button>
-          <Button 
+          <Button
           className='relative'
             variant="outline" 
             size="icon"
