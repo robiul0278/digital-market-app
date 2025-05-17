@@ -33,7 +33,7 @@ export default function FeatureCard({ icon: Icon, title, index = 0 }: FeatureCar
   return (
     <div
       ref={cardRef}
-      className="flex flex-col items-center justify-center rounded-xl shadow w-full py-5 border transition"
+      className="flex flex-col items-center justify-center rounded-xl shadow w-full py-4 border transition"
     >
       <Icon className="w-10 h-10 mb-3" />
       <h3 className="text-center text-lg font-semibold">{title}</h3>

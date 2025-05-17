@@ -19,7 +19,7 @@ export default function Features() {
   const marqueeList = [...features, ...features];
 
   return (
-    <div className="max-w-7xl mx-auto p-4 md:py-10 lg:py-10">
+    <div className="max-w-7xl mx-auto py-3 md:py-10 lg:py-10">
       {/* Mobile: marquee */}
       <div className="block sm:hidden overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
