@@ -60,9 +60,9 @@ export default function Home() {
         <HeroSection />
         <Features />
         <div className="max-w-7xl mx-auto pt-4 pb-12 px-4 md:p-0 lg:p-0">
-          <div className="flex items-center justify-center gap-4 mb-10">
+          <div className="flex items-center justify-center gap-4 mb-4 md:mb-8 lg:mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-center whitespace-nowrap">
-              Our Featured Products
+              Featured Products
             </h2>
             <hr className="flex-grow border border-t border-cyan-700" />
 
