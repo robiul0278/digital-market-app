@@ -62,6 +62,10 @@ const config: Config = {
         },
       },
       keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(-2%)' },
+          '100%': { transform: 'translateX(-100%)' }, // move half because we duplicate content
+        },
         'accordion-down': {
           from: {
             height: '0',
@@ -82,6 +86,7 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        marquee: 'marquee 20s linear infinite',
       },
     },
   },

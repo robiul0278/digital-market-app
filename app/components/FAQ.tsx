@@ -72,7 +72,7 @@ export default function FAQ() {
             <div className="space-y-6">
                 {faqs.map(({ question, answer }, idx) => (
                     <Collapsible key={idx} defaultOpen={false}>
-                        <CollapsibleTrigger className="flex justify-between w-full rounded-md border-2 px-6 py-2 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <CollapsibleTrigger className="flex justify-between w-full rounded-md border-2 px-6 py-2 font-medium text-start focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             {question}
                             <span className="ml-2 text-cyan-500 font-bold text-xl">+</span>
                         </CollapsibleTrigger>

@@ -15,11 +15,31 @@ export default function Features() {
     { icon: ShieldCheck, title: "SECURE CHECKOUT" },
   ];
 
+  // duplicate list for smooth loop
+  const marqueeList = [...features, ...features];
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4 md:py-10 lg:py-10">
-      {features.map((feature, index) => (
-        <FeatureCard key={index} icon={feature.icon} title={feature.title} />
-      ))}
+    <div className="max-w-7xl mx-auto p-4 md:py-10 lg:py-10">
+      {/* Mobile: marquee */}
+      <div className="block sm:hidden overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {marqueeList.map((feature, index) => (
+            <div
+              key={index}
+              className="min-w-[250px] snap-start mx-2"
+            >
+              <FeatureCard icon={feature.icon} title={feature.title} index={index % 4} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: grid */}
+      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-6">
+        {features.map((feature, index) => (
+          <FeatureCard key={index} icon={feature.icon} title={feature.title} index={index} />
+        ))}
+      </div>
     </div>
   );
 }
