@@ -14,7 +14,7 @@ export function Providers({ children }: ProvidersProps) {
     <Provider store={store}>
       <ThemeProvider attribute="class" defaultTheme="light">
         {children}
-        <Toaster  />
+    <Toaster position="top-center" />
       </ThemeProvider>
     </Provider>
   );

@@ -78,8 +78,8 @@ export default function HeroSection() {
     >
       {/* <DecorationElements /> */}
       <div className="relative z-10 max-w-7xl mx-auto px-4  p-6 lg:p-8 border-4 border-y-red-700 border-x-cyan-700 rounded-2xl">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between md:gap-12 lg:gap-12 gap-4">
-          <div ref={textContainerRef} className="space-y-2 md:space-y-8  lg:space-y-8 text-center lg:text-left">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+          <div ref={textContainerRef} className="space-y-6 md:space-y-8  lg:space-y-8 text-center lg:text-left">
             <div className="animate-text inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               <Sparkles className="h-4 w-4" />
               Premium Digital Products

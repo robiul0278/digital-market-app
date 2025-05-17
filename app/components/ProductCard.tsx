@@ -46,14 +46,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col border border-y-red-700 border-x-cyan-700">
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover rounded-t-lg"
+            className="object-cover rounded-t-md"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
