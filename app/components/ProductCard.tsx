@@ -59,7 +59,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <CardTitle className="p-4">{product.name}</CardTitle>
+        <CardTitle className="p-5 text-xl">{product.name}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
         <p className="text-muted-foreground">{product.description}</p>
