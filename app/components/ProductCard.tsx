@@ -41,7 +41,9 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const handleAddToCart = () => {
     dispatch(addToCart({ ...product, quantity }));
-    toast.success(`Added ${quantity} ${product.name} to cart`);
+    toast.success(`Added ${quantity} ${product.name} to cart`, {
+      duration: 1000,
+    });
     setQuantity(1);
   };
 

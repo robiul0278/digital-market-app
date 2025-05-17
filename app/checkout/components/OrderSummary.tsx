@@ -80,7 +80,7 @@ export default function OrderSummary() {
         <Link href="/" passHref>
           <Button variant="outline" size="sm" className="gap-2 mt-4">
             <ArrowLeft className="h-4 w-4" />
-            Back to Cart
+            Back to Shop
           </Button>
         </Link>
       </CardContent>
