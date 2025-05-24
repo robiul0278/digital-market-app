@@ -8,52 +8,52 @@ import {
 
 const faqs = [
     {
-        question: 'How do I receive my purchased account?',
+        question: 'What materials are the toy cars made of?',
         answer: (
             <>
-                Youll receive your credentials via email instantly after checkout. Make sure to check your spam or promotions folder if you dont see it in your inbox.
+                Our toy cars are primarily made of high-quality die-cast metal with some plastic components for detailing.
                 <br /><br />
-                If you experience any delay, our support team is available to assist you promptly.
+                They are durable, child-safe, and built to last for both play and collection.
             </>
         ),
     },
     {
-        question: 'Are these accounts authentic and safe?',
+        question: 'Do the toy cars have moving parts?',
         answer: (
             <>
-                Yes, all accounts we provide are thoroughly verified to ensure authenticity and safety. We partner only with trusted sources to guarantee quality.
+                Yes! Many of our models feature opening doors, hoods, trunks, and functional wheels for a realistic experience.
                 <br /><br />
-                Your privacy is our priority. All account details are securely handled and encrypted during transmission.
+                Product descriptions specify which features are included.
             </>
         ),
     },
     {
-        question: 'Can I get a refund?',
+        question: 'How long does shipping take?',
         answer: (
             <>
-                We offer replacements if there’s an issue with your purchase. Refunds are granted in valid cases such as duplicate purchases or inability to access the account.
+                Orders are processed within 24 hours. Standard shipping within the USA typically takes 3–5 business days.
                 <br /><br />
-                Please contact our support within 48 hours of purchase with your order details for a quick resolution.
+                Expedited options are available at checkout.
             </>
         ),
     },
     {
-        question: 'What payment methods do you accept?',
+        question: 'Can I return or exchange a toy car?',
         answer: (
             <>
-                We accept all major credit/debit cards and PayPal for secure and convenient transactions.
+                Yes, we accept returns or exchanges within 7 days of delivery if the item is unused and in its original packaging.
                 <br /><br />
-                For any issues during payment, contact our support for assistance.
+                Just contact our support with your order ID and reason for return.
             </>
         ),
     },
     {
-        question: 'Is customer support available 24/7?',
+        question: 'Are these toys safe for kids?',
         answer: (
             <>
-                Our support team is available from 10 AM to 12 PM daily. For urgent matters, leave us a message and we will respond as soon as possible.
+                Absolutely. All our toy cars meet US safety standards and are free from small detachable parts for kids under 3.
                 <br /><br />
-                We aim to provide prompt and helpful assistance to ensure your satisfaction.
+                Please check the recommended age on each product page.
             </>
         ),
     },
@@ -61,7 +61,7 @@ const faqs = [
 
 export default function FAQ() {
     return (
-        <section className="max-w-7xl mx-auto py-12  w-full p-4">
+        <section className="max-w-7xl mx-auto py-6 w-full md:py-16 lg:py-16">
             <div className="flex items-center justify-center gap-4 mb-10">
                 <hr className="flex-grow border border-t border-red-700" />
                 <h2 className="text-2xl md:text-3xl font-bold text-center whitespace-nowrap">
@@ -76,12 +76,11 @@ export default function FAQ() {
                             {question}
                             <span className="ml-2 text-cyan-500 font-bold text-xl">+</span>
                         </CollapsibleTrigger>
-                        <CollapsibleContent className=" border border-t-0 rounded-b-md">
+                        <CollapsibleContent className="border border-t-0 rounded-b-md">
                             <div className="max-w-7xl mx-auto px-6 py-4">
                                 {answer}
                             </div>
                         </CollapsibleContent>
-
                     </Collapsible>
                 ))}
             </div>

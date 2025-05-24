@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <footer className="border-t bg-background">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-0 py-8 md:py-12">
 
         {/* Mobile & Tablet View: Accordion */}
         <div className="lg:hidden">

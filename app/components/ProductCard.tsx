@@ -59,11 +59,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <CardTitle className="p-5 text-xl">{product.name}</CardTitle>
+        <CardTitle className="px-6 py-2 text-lg">{product.name}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground">{product.description}</p>
-        <p className="text-xl font-bold mt-2">${product.price.toFixed(2)}</p>
+        <p className="text-muted-foreground text-sm">{product.description}</p>
+        <p className="text-lg font-bold mt-2">${product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="flex items-center gap-2">
         <div className="flex items-center rounded-md border">

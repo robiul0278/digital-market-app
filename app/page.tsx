@@ -10,47 +10,62 @@ import FAQ from './components/FAQ';
 const products = [
   {
     id: '1',
-    name: 'Gmail Account',
-    price: 4.99,
-    image: 'https://image.cnbcfm.com/api/v1/image/106199081-1571858526194gettyimages-887454120.jpeg?v=1701360669',
-    description: 'Professional Gmail account with premium features',
+    name: 'Ford Mustang GT Toy',
+    price: 12.99,
+    image: 'https://images-cdn.ubuy.com.sa/66ab89de07956d01a45e73c3-2015-ford-mustang-gt-5-0-orange-metallic.jpg',
+    description: 'Metallic die-cast Mustang GT model with detailed interior',
   },
   {
     id: '2',
-    name: 'Google Voice',
-    price: 9.99,
-    image: 'https://i.insider.com/5ddd41d5fd9db2334764cfd3?width=700',
-    description: 'US phone number with calling and texting capabilities',
+    name: 'Chevrolet Camaro SS Toy',
+    price: 11.99,
+    image: 'https://www.rmtoys.co.uk/cdn/shop/products/l1rqmfddxpb_75319c15-9cb2-4c72-ac5d-3cce969ec13c.jpg?v=1745233598',
+    description: 'Camaro SS metal toy with opening doors and pull-back action',
   },
   {
     id: '3',
-    name: 'Adobe Creative Cloud',
-    price: 29.99,
-    image: 'https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg',
-    description: 'Full access to Adobe Creative Suite',
+    name: 'Dodge Challenger SRT Toy',
+    price: 13.49,
+    image: 'https://i.ytimg.com/vi/lpzirYgi9HU/maxresdefault.jpg',
+    description: 'Realistic die-cast Dodge Challenger with sleek finish',
   },
-  {
-    id: '4',
-    name: 'Microsoft 365',
-    price: 19.99,
-    image: 'https://cdnpro.eraspace.com/media/mageplaza/blog/post/s/o/software_microsoft_365.jpg.png',
-    description: 'Complete Microsoft Office package with cloud storage',
-  },
+{
+  id: '4',
+  name: 'Tesla Model S Toy Car',
+  price: 14.99,
+  image: 'https://rukminim2.flixcart.com/image/850/1000/xif0q/vehicle-pull-along/m/3/1/tesla-model-s-toy-car-1-32-scale-alloy-car-diecast-model-toys-original-imagpceutwpf6aap.jpeg?q=90&crop=false',
+  description: 'Eco-friendly metallic Tesla Model S miniature car',
+},
   {
     id: '5',
-    name: 'Spotify Premium',
-    price: 14.99,
-    image: 'https://sadesign.ai/pictures/picfullsizes/2024/11/27/ijt1732694230.jpg',
-    description: 'Ad-free music streaming with offline downloads',
+    name: 'Ford F-150 Pickup Toy',
+    price: 10.99,
+    image: 'https://diecastmodelcentre.co.uk/cdn/shop/files/Ford-F-150-Lightning-2022-red-143-Scale-Diecast-Toy-Car-Bburago.png?v=1713565364',
+    description: 'Durable die-cast Ford F-150 truck toy for collectors',
   },
   {
     id: '6',
-    name: 'Netflix Premium',
-    price: 24.99,
-    image: 'https://gameloverbd.com/public/uploads/all/ME9lV1SHF38JjRVKWzETSECLuVDAIBYBHgcoVHLn.jpg',
-    description: '4K streaming on multiple devices',
+    name: 'Jeep Wrangler Off-Road Toy',
+    price: 9.99,
+    image: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg',
+    description: 'Jeep Wrangler off-road edition with realistic suspension',
   },
+  {
+    id: '7',
+    name: 'Cadillac CTS-V Luxury Toy Car',
+    price: 13.99,
+    image: 'https://i.ytimg.com/vi/U8z0hOURscs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBmSt283IKqjWNq8lqStq4OHVe-7w',
+    description: 'High-end Cadillac CTS-V die-cast with metallic sheen',
+  },
+  {
+    id: '8',
+    name: 'Lincoln Continental Classic Toy',
+    price: 15.49,
+    image: 'https://i.ebayimg.com/thumbs/images/g/RnsAAOSw~iBniivU/s-l1200.jpg',
+    description: 'Vintage Lincoln Continental replica with fine chrome detailing',
+  }
 ];
+
 
 export default function Home() {
   return (
@@ -68,7 +83,7 @@ export default function Home() {
 
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
